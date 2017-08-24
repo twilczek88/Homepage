@@ -1,37 +1,64 @@
-//Konfiguracja Webpack
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require("path");
+const webpack = require('webpack');
+
 module.exports = {
-    entry: ['./js/input.jsx', './css/main.scss'],
+    entry: ['whatwg-fetch', './js/index.jsx', './scss/bundle.scss'],
     output: {
-        path: path.resolve("js"),
-        filename: "output.js"
+        path: path.resolve("dist"),
+        filename: 'index.js'
+    },
+    devServer:	{
+        inline:	true,
+        contentBase: './',
+        port: 3001
     },
     watch: true,
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015', 'stage-2']
-                }
+                test: /\.jsx$/,
+                exclude: [/node_modules/],
+                use: [{
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015', 'stage-2', 'react']
+                    }
+                }],
             },
             {
-                //sudo npm install style-loader css-loader --save-dev
-                //sudo npm install node-sass sass-loader --save-dev
                 test: /\.scss$/,
-                loader: ['style-loader', 'css-loader', 'sass-loader']
-
-            }
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                minimize: false,
+                                modules: true,
+                                importLoaders: 2,
+                                localIdentName: '[name]__[local]___[hash:base64:6]',
+                            }
+                        },
+                        {
+                            loader: 'sass-loader'
+                        },
+                        {
+                            loader: 'autoprefixer-loader'
+                        }
+                    ],
+                }),
+            },
         ]
-    }
-}
+    },
 
-//dev server
-//sudo npm install webpack-dev-server --save-dev
-
-//localinstall webpack
-//sudo npm install --save-dev webpack
-//launch
-//./node_modules/.bin/webpack-dev-server --inline --hot
+    plugins: [
+        new ExtractTextPlugin({
+            filename: 'app.css',
+            allChunks: true
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery'
+        })
+    ]
+};
