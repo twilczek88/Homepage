@@ -6,11 +6,13 @@ module.exports = {
     entry: ['whatwg-fetch', './js/index.jsx', './scss/bundle.scss'],
     output: {
         path: path.resolve("dist"),
-        filename: 'index.js'
+        filename: 'index.js',
+        publicPath: '/'
     },
     devServer:	{
         inline:	true,
         contentBase: './',
+        historyApiFallback: true,
         port: 3001
     },
     watch: true,
