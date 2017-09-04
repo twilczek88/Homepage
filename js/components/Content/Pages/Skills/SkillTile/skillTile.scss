@@ -1,0 +1,20 @@
+$base: hsl(210, 20, 25);
+$light: hsl(180, 15, 50);
+$lighter: hsl(120, 30, 80);
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.tile {
+    width: 7.5rem;
+    height: 7.5rem;
+    padding: 1.5rem;
+
+    background: #fff;
+    border: solid 2px lighten($lighter, 10);
+    border-radius: 50%;
+}

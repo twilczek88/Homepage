@@ -1,3 +1,29 @@
-.container {
-    font-size: 72px;
+$base: hsl(210, 20, 25);
+$light: hsl(180, 15, 50);
+$lighter: hsl(120, 30, 80);
+
+header {
+    text-align: center;
+    margin: 1rem 0;
+
+    h1{
+        font-size: 48px;
+        line-height: 48px;
+        flex:1;
+    }
+    h2{
+
+        color: $light;
+        font-weight: 200;
+        font-size: 24px;
+        line-height: 24px;
+        flex: 1;
+    }
+}
+
+@media (max-width: 1280px) {
+    header {
+        display: block;
+        text-align: center;
+    }
 }

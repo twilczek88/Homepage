@@ -1,4 +1,209 @@
+$base: hsl(210, 20, 25);
+$light: hsl(180, 15, 50);
+$lighter: hsl(120, 30, 80);
+
+aside {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100vh;
+    width: 4rem;
+    padding: .5rem;
+    background: $base;
+
+    p {
+        letter-spacing: .5rem;
+        font-weight: 400;
+    }
+
+    svg {
+        padding: .5rem;
+    }
+
+    nav {
+        margin-bottom: 2rem;
+        z-index: 1;
+    }
+
+    ul {
+
+        li {
+            transition: all .1s;
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &:hover {
+                background: $lighter;
+                & path {
+                    fill: $base;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            transition: all .1s;
+            width: 100%;
+            height: 100%;
+        }
+        path {
+            fill: $light;
+        }
+    }
+}
+
+.burger {
+    transition: all .1s;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    path {
+        fill: $light;
+    }
+    &:hover {
+        background: $lighter;
+        & path {
+            fill: $base;
+        }
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    margin-top: 4rem;
+}
+
+
 .active {
-    font-weight: bold;
-    width: 100px;
+    background: $light;
+    p {color: $lighter;}
+    path {
+        transition: all .1s;
+        fill: $lighter;
+    }
+    &:hover{
+        background: $light;
+        p {color: $lighter;}
+        path {
+            fill: $lighter;
+        }
+    }
+}
+
+.flag {
+    cursor: pointer;
+    transition: all .1s;
+    margin-bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    svg {
+        border-radius: 17.5px;
+    }
+    &:hover {
+        background: $lighter;
+    }
+}
+
+:global {
+    .menuSwitch-enter {
+        z-index: 0;
+        position: relative;
+        top: -30rem;
+    }
+
+    .menuSwitch-enter.menuSwitch-enter-active {
+        z-index: 0;
+        transition: all .2s;
+        top: 0;
+    }
+
+    .menuSwitch-leave {
+        z-index: 0;
+        transition: all .2s;
+        position: relative;
+        top: 0;
+    }
+
+    .menuSwitch-leave.menuSwitch-leave-active {
+        z-index: 0;
+        top: -30rem;
+    }
+}
+
+.animation-wrapper {
+    z-index: -1;
+}
+
+@media (max-width: 720px) {
+    aside{
+        position: fixed;
+        width: 100%;
+        height: 4rem;
+        padding: 0;
+        nav {
+            height: 4rem;
+            background: $base;
+            margin: 0;
+
+        }
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &:first-of-type {
+            padding: .5rem;
+        }
+        ul {
+            background: $base;
+            &:first-of-type {
+                padding-bottom: .5rem;
+                border-bottom: 1px solid $light;
+            }
+            &:last-of-type{
+                padding-top: .5rem;
+            }
+        }
+    }
+
+    .mobile-nav {
+        background: none;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        li {
+
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            a {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5rem;
+            }
+            p { color: $light; }
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+    .active {
+        p {
+            color: $lighter !important;
+        }
+    }
 }

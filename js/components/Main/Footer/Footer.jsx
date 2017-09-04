@@ -6,9 +6,11 @@ import styles from './footer.scss';
 
 class Footer extends Component {
     render() {
-        return <div styleName='container'>
-            Footer
-        </div>
+        const year = new Date().getFullYear();
+        return <footer>
+            Tomasz Wilczek { year }&copy;
+        </footer>
+
     }
 }
 

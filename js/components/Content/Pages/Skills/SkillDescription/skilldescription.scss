@@ -2,10 +2,6 @@ $base: hsl(210, 20, 25);
 $light: hsl(180, 15, 50);
 $lighter: hsl(120, 30, 80);
 
-main {
-    height: 100%;
-}
-
-.animation-wrapper {
-    h6{ background: black }
+.skill-description {
+    max-width: 500px;
 }

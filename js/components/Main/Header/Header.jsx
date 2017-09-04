@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './header.scss';
-// import icons from '../utilities/icons/icons.jsx';
-
 
 class Header extends Component {
     render() {
-        return <div styleName='container'>
-            Header
-        </div>
+        return <header>
+            <h1>Tomasz Wilczek</h1>
+            <h2>front-end developer</h2>
+        </header>
     }
 }
 

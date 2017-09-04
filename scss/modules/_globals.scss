@@ -1,0 +1,39 @@
+$base: hsl(210, 20, 25);
+$light: hsl(180, 15, 50);
+$lighter: hsl(120, 30, 80);
+
+body {
+    font-weight: 200;
+    color: $base;
+    background: adjust-hue(desaturate(lighten($lighter, 10), 20), -30);
+}
+
+h1, h2, h3 {
+    font-family: 'Rokkitt', serif;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 48px;
+    color: $light;
+}
+
+p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 200;
+    color: $base;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: $base;
+}
+
+article {
+    width:100%;
+    max-width: 500px;
+    min-height: 340px;
+}

@@ -1,3 +1,57 @@
-.container{
+$base: hsl(210, 20, 25);
+$light: hsl(180, 15, 50);
+$lighter: hsl(120, 30, 80);
+
+.container {
     display: flex;
+    min-height: 100vh;
+}
+
+.animation-wrapper {
+    flex: 1;
+}
+
+.spinner-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .spinner {
+        align-self: center;
+        width: 100px;
+        height: 100px;
+        border: 10px solid $lighter;
+        border-top: 10px solid $light;
+        border-radius: 50%;
+        animation: spin linear 1s infinite;
+    }
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    p {
+        margin-top: 1rem;
+    }
+}
+
+:global {
+    .spinnerpop-appear {
+        position: relative;
+        left: -100vw;
+    }
+
+    .spinnerpop-appear.spinnerpop-appear-active {
+        transition: all ease-out .5s;
+        position: relative;
+        left: 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
 }

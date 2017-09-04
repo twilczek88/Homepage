@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require('webpack');
 
 module.exports = {
-    entry: ['whatwg-fetch', './js/index.jsx', './scss/bundle.scss'],
+    entry: ['whatwg-fetch', './scss/bundle.scss', './js/index.jsx'],
     output: {
         path: path.resolve("dist"),
         filename: 'index.js',
@@ -58,9 +58,6 @@ module.exports = {
         new ExtractTextPlugin({
             filename: 'app.css',
             allChunks: true
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery'
         })
     ]
 };

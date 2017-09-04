@@ -1,0 +1,43 @@
+$base: hsl(210, 20, 25);
+$light: hsl(180, 15, 50);
+$lighter: hsl(120, 30, 80);
+
+.container {
+    transition: all .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    user-select: none;
+    cursor: pointer;
+
+    padding: .5rem;
+    background: adjust-hue(desaturate(lighten($lighter, 10), 20), -30);
+
+    &:hover {
+        background: $light;
+        h3 {
+            color: $lighter;
+        }
+        p {
+            color: #fff;
+        }
+    }
+    h3 {
+        transition: all .2s;
+        font-size: 2rem;
+        color: $base;
+    }
+    p {
+        transition: all .2s;
+        color: $base;
+        font-weight: 300;
+    }
+
+}
+
+.tile {
+    width: 7.5rem;
+    height: 7.5rem;
+    padding: 1.5rem;
+}

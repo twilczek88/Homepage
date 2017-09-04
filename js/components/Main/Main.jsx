@@ -10,8 +10,10 @@ class Main extends Component {
     render() {
         return <div styleName='container'>
             <Header/>
-            <Content/>
-            <Footer/>
+            <Content
+                lang = { this.props.lang }
+                links = { this.props.links }
+                pending = { this.props.pending } />
         </div>
     }
 }
