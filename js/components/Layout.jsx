@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 import CSSModules from 'react-css-modules';
 import styles from './layout.scss';
 
@@ -45,23 +45,20 @@ class Layout extends Component {
             </div>
         } else {
             return <Router>
-                <ReactCSSTransitionGroup
+                <CSSTransitionGroup
                     component = 'div'
-                    styleName = 'animation-wrapper'
-                    transitionName = 'spinnerpop'
+                    styleName = 'container'
+                    transitionName = 'appear'
                     transitionAppear = { true }
                     transitionEnter = { false }
                     transitionLeave = { false }
                     transitionAppearTimeout = { 500 }>
-                    <div styleName='container'>
-                        <Menu switchLanguage = { this.switchLanguage } lang = { this.state.lang }/>
-                        <Main
-                            lang = { this.state.lang }
-                            pending = { this.state.pending }
-                            links = { this.state.links }
-                        />
-                    </div>
-                </ReactCSSTransitionGroup>
+                    <Menu switchLanguage = { this.switchLanguage } lang = { this.state.lang }/>
+                    <Main
+                        lang = { this.state.lang }
+                        pending = { this.state.pending }
+                        links = { this.state.links }/>
+                </CSSTransitionGroup>
             </Router>
         }
     }

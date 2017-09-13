@@ -11,33 +11,59 @@ $lighter: hsl(120, 30, 80);
     user-select: none;
     cursor: pointer;
 
-    padding: .5rem;
     background: adjust-hue(desaturate(lighten($lighter, 10), 20), -30);
 
-    &:hover {
-        background: $light;
-        h3 {
-            color: $lighter;
-        }
-        p {
-            color: #fff;
-        }
+    position: relative;
+    overflow: hidden;
+    margin: .5rem;
+    width: 15rem;
+    height: 15rem;
+
+    h3, p {
+        height: 50%;
+        z-index: 1;
+        position: absolute;
+        transition: all .25s;
+        color: #fff;
+        width: 100%;
+        padding: .5rem;
+        background: transparentize($base, 0.25);
+
     }
+
     h3 {
-        transition: all .2s;
+        top: 0;
         font-size: 2rem;
-        color: $base;
     }
     p {
-        transition: all .2s;
-        color: $base;
+        display: flex;
+        bottom: 0;
         font-weight: 300;
+        align-items: flex-end;
     }
 
+    &:hover {
+        .thumbnail-wrapper {
+            width: 125%;
+            height: 125%;
+            top: -12.5%;
+            left: -12.5%;
+        }
+        h3 {
+            top: -50%;
+        }
+
+        p {
+            bottom: -50%;
+        }
+    }
 }
 
-.tile {
-    width: 7.5rem;
-    height: 7.5rem;
-    padding: 1.5rem;
+.thumbnail-wrapper {
+    transition: all 1s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
 }

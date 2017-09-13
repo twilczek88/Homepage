@@ -7,10 +7,6 @@ $lighter: hsl(120, 30, 80);
     min-height: 100vh;
 }
 
-.animation-wrapper {
-    flex: 1;
-}
-
 .spinner-wrapper{
     display: flex;
     flex-direction: column;
@@ -37,14 +33,12 @@ $lighter: hsl(120, 30, 80);
 }
 
 :global {
-    .spinnerpop-appear {
-        position: relative;
+    .appear-appear {
+        transition: all .5s;
         left: -100vw;
     }
 
-    .spinnerpop-appear.spinnerpop-appear-active {
-        transition: all ease-out .5s;
-        position: relative;
+    .appear-appear.appear-appear-active {
         left: 0;
     }
 }

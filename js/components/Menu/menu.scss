@@ -3,6 +3,7 @@ $light: hsl(180, 15, 50);
 $lighter: hsl(120, 30, 80);
 
 aside {
+    z-index: 3;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -15,7 +16,7 @@ aside {
 
     p {
         letter-spacing: .5rem;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     svg {
@@ -23,8 +24,8 @@ aside {
     }
 
     nav {
+        z-index: 3;
         margin-bottom: 2rem;
-        z-index: 1;
     }
 
     ul {
@@ -112,32 +113,28 @@ aside {
 
 :global {
     .menuSwitch-enter {
-        z-index: 0;
         position: relative;
         top: -30rem;
     }
 
     .menuSwitch-enter.menuSwitch-enter-active {
-        z-index: 0;
         transition: all .2s;
         top: 0;
     }
 
     .menuSwitch-leave {
-        z-index: 0;
         transition: all .2s;
         position: relative;
         top: 0;
     }
 
     .menuSwitch-leave.menuSwitch-leave-active {
-        z-index: 0;
         top: -30rem;
     }
 }
 
 .animation-wrapper {
-    z-index: -1;
+    letter-spacing: normal;
 }
 
 @media (max-width: 720px) {
@@ -173,8 +170,8 @@ aside {
     }
 
     .mobile-nav {
+        z-index: 2;
         background: none;
-        z-index: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

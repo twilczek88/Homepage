@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 import CSSModules from 'react-css-modules';
 import styles from './content.scss';
 
@@ -13,25 +13,31 @@ import NotFound from './Pages/NotFound/NotFound.jsx';
 class Content extends Component {
     render() {
         return <main>
-            <Switch>
-                <Route exact path='/'
-                    component={ () => ( <About
-                        lang={ this.props.lang }
-                        pending={ this.props.pending }
-                        links={ this.props.links } /> )}/>
-                <Route path='/skills'
-                    component={ () => ( <Skills
-                        lang={ this.props.lang } /> )}/>
-                <Route path='/projects'
-                    component={ () => ( <Projects
-                        lang={ this.props.lang }
-                        pending={ this.props.pending }
-                        links={ this.props.links } /> )}/>
-                <Route path='/contact'
-                    component={ () => ( <Contact
+
+            <CSSTransitionGroup
+                transitionName = 'fade'
+                transitionEnterTimeout = { 300 }
+                transitionLeave = { false }>
+                <Switch key={ location }>
+                    <Route exact path='/'
+                        component={ () => ( <About
+                            lang={ this.props.lang }
+                            pending={ this.props.pending }
+                            links={ this.props.links } /> )}/>
+                    <Route path='/skills'
+                        component={ () => ( <Skills
+                            lang={ this.props.lang } /> )}/>
+                    <Route path='/projects'
+                        component={ () => ( <Projects
+                            lang={ this.props.lang }
+                            pending={ this.props.pending }
+                            links={ this.props.links } /> )}/>
+                    <Route path='/contact'
+                        component={ () => ( <Contact
                         lang={ this.props.lang } /> )}/>
                     <Route component={ NotFound }/>
-            </Switch>
+                </Switch>
+            </CSSTransitionGroup>
         </main>
     }
 }

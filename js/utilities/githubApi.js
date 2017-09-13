@@ -6,7 +6,7 @@ const api = {
         .then(r => r.json())
         .then(r => {
             return r.filter(link => {
-                return (link.homepage != null && link.name != 'Homepage');
+                return (link.homepage != null);
             });
         });
     }

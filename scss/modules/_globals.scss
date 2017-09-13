@@ -3,7 +3,7 @@ $light: hsl(180, 15, 50);
 $lighter: hsl(120, 30, 80);
 
 body {
-    font-weight: 200;
+    font-weight: 300;
     color: $base;
     background: adjust-hue(desaturate(lighten($lighter, 10), 20), -30);
 }
@@ -20,7 +20,7 @@ h1 {
 
 p {
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     color: $base;
     font-size: 1.5rem;
     line-height: 1.75rem;
@@ -36,4 +36,7 @@ article {
     width:100%;
     max-width: 500px;
     min-height: 340px;
+    @media (max-width: 1280px) {
+        min-height: auto;
+    }
 }

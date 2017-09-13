@@ -34,17 +34,16 @@ class SkillDescription extends Component {
         }
 
         if(this.props.lang == 'english'){
-            return <article styleName='skill-description'>
+            return <article>
                 { skill }
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>I use semantic HTML5 and CSS3 with SASS preprocessor to give my projects proper looks, and JavaScript ES2015 to program behaviour of my apps. I have a good grasp of JQuery and know my way around ReactJS. Depending on project complexity I bundle code up with either Gulp or Webpack.</p>
             </article>
         } else {
-            return <article styleName='skill-description'>
+            return <article>
                 { skill }
-                <p>Litwo, ojczyzno moja, ty jesteś jak zdrowie. Tylko ten się dowie, ile Cię cenić trzeba, kto Cię stracił... Dziś piękność Twoją w całej ozdobię widzę i podziwiam, bo tęsknię po Tobie</p>
+                <p>Używam sementycznego HTML5 i CSS3 wraz z preprocesorem SASS, aby nadać swoim projektom właściwy wygląd i wykorzystuję JavaScript ES2015, by zaprogramować zachowanie swoich aplikacji. Mam dobre rozeznanie w JQuery i potrafię odnaleźć się w ReactJS. W zależności od złożoności danego projektu, automatyzuje procesy przy pomocy Gulp lub Webpack.</p>
             </article>
         }
-
     }
 }
 

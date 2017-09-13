@@ -38,18 +38,18 @@ class Home extends Component {
         });
 
         return <section styleName='container'>
-            <div styleName='left'>
-                    <ReactCSSTransitionGroup component='div' styleName='animation-wrapper'
-                        transitionName='switch'
-                        transitionAppearTimeout = { 200 }
-                        transitionEnterTimeout = { 200 }
-                        transitionLeaveTimeout = { 200 }>
-                        <SkillDescription
-                            chosenSkill={ this.state.chosenSkill }
-                            lang={ this.props.lang }
-                            key={ this.state.chosenSkill }/>
-                    </ReactCSSTransitionGroup>
-            </div>
+            <ReactCSSTransitionGroup
+                component='div'
+                styleName='left'
+                transitionName='switch'
+                transitionAppearTimeout = { 200 }
+                transitionEnterTimeout = { 200 }
+                transitionLeaveTimeout = { 200 }>
+                <SkillDescription
+                    chosenSkill={ this.state.chosenSkill }
+                    lang={ this.props.lang }
+                    key={ this.state.chosenSkill }/>
+            </ReactCSSTransitionGroup>
             <div styleName='right'>
                 <div styleName='grid'>
                         { drawTiles }

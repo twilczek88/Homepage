@@ -7,36 +7,28 @@ $lighter: hsl(120, 30, 80);
     grid-template-columns: 15fr 20fr;
     grid-template-rows: 10fr 1fr;
     min-height: 100%;
+    grid-gap: .5rem;
 }
 
 .left {
-    margin: 1rem 0;
+    flex: 1;
     display: flex;
+    width: 100%;
+    // height: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex: 1;
-
-    .animation-wrapper {
-        position: relative;
-        width:100%;
-        max-width: 500px;
-        min-height: 340px;
-    }
+    margin: 1rem 0;
 
     p {
         font-size: 24px;
         border-top: 2px solid $light;
         padding: .5rem;
         padding-top: 1.5rem;
-        min-height: 250px;
-        min-width: 340px;
     }
 }
 
 .right {
-    flex: 1;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,8 +37,6 @@ $lighter: hsl(120, 30, 80);
 .grid {
     height: 100%;
     width: 100%;
-    max-width: 42rem;
-    max-height: 42rem;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,7 +49,6 @@ $lighter: hsl(120, 30, 80);
     justify-content: center;
     align-items: flex-end;
     .next-button {
-        flex: 1;
         transition: .1s;
         width: 3.5rem;
         height: 3.5rem;
@@ -79,30 +68,22 @@ $lighter: hsl(120, 30, 80);
 :global {
     .switch-enter {
         position: absolute;
-        top: 0;
-        left: 0;
         opacity: .01;
     }
     .switch-enter.switch-enter-active {
         position: absolute;
-        top: 0;
-        left: 0;
         transition: all .2s;
         opacity: 1;
-
     }
     .switch-leave {
         position: absolute;
-        top: 0;
-        left: 0;
         opacity: 1;
     }
     .switch-leave.switch-leave-active {
         position: absolute;
-        top: 0;
-        left: 0;
         transition: all .2s;
         opacity: .01;
+        align-self: center;
     }
 }
 
@@ -110,17 +91,18 @@ $lighter: hsl(120, 30, 80);
     .container {
         display: flex;
         flex-flow: column nowrap;
-        min-height: 100%;
+
     }
+
+    .left {
+    }
+
     .right {
         order: -1;
-        flex: 1;
-        margin: 0 auto;
-        flex-direction: column;
+        justify-content: center;
     }
 
     .grid {
-        height: auto;
         width: auto;
         grid-gap: 2rem;
 
@@ -131,18 +113,9 @@ $lighter: hsl(120, 30, 80);
             background: adjust-hue(desaturate(lighten($lighter, 10), 20), -30);
         }
     }
-
-    .left {
-        flex: 1;
-        height: 100%;
-
-    }
 }
 
 @media (min-width: 1280px) {
-    .left, .right, .next {
-        flex: 0;
-    }
 
     .grid {
         [id^='icon'] {
@@ -162,13 +135,9 @@ $lighter: hsl(120, 30, 80);
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        max-height: 100%;
         max-width: 100%;
         [id^='icon'] {
             margin: 1rem;
         }
-    }
-    .left {
-        article { width: 100%; }
     }
 }
