@@ -7,12 +7,12 @@ module.exports = {
     output: {
         path: path.resolve("dist"),
         filename: 'index.js',
-        publicPath: '/Homepage'
+        // publicPath: '/'
     },
     devServer:	{
         inline:	true,
-        // contentBase: './',
-        // historyApiFallback: true,
+        contentBase: './',
+        historyApiFallback: true,
         port: 3001
     },
     watch: true,
