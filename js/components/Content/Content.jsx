@@ -19,20 +19,20 @@ class Content extends Component {
                 transitionEnterTimeout = { 300 }
                 transitionLeave = { false }>
                 <Switch key={ location }>
-                    <Route exact path='/'
+                    <Route exact path='/Homepage'
                         component={ () => ( <About
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route path='/skills'
+                    <Route path='/Homepage/skills'
                         component={ () => ( <Skills
                             lang={ this.props.lang } /> )}/>
-                    <Route path='/projects'
+                    <Route path='/Homepage/projects'
                         component={ () => ( <Projects
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route path='/contact'
+                    <Route path='/Homepage/contact'
                         component={ () => ( <Contact
                         lang={ this.props.lang } /> )}/>
                     <Route component={ NotFound }/>
