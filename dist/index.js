@@ -35474,7 +35474,7 @@ exports.default = (0, _reactCssModules2.default)(Header, _header2.default);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(process) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -35542,7 +35542,6 @@ var Content = function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            var commonPath = 'https://twilczek88.github.io/Homepage';
             return _react2.default.createElement(
                 'main',
                 null,
@@ -35555,7 +35554,7 @@ var Content = function (_Component) {
                     _react2.default.createElement(
                         _reactRouterDom.Switch,
                         { key: location },
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: commonPath + '/',
+                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: process.env.PUBLIC_URL + '/',
                             component: function component() {
                                 return _react2.default.createElement(_About2.default, {
                                     lang: _this2.props.lang,
@@ -35590,6 +35589,7 @@ var Content = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _reactCssModules2.default)(Content, _content2.default);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 433 */

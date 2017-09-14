@@ -12,14 +12,14 @@ import NotFound from './Pages/NotFound/NotFound.jsx';
 
 class Content extends Component {
     render() {
-        const commonPath = 'https://twilczek88.github.io/Homepage';
+        
         return <main>
             <CSSTransitionGroup
                 transitionName = 'fade'
                 transitionEnterTimeout = { 300 }
                 transitionLeave = { false }>
                 <Switch key={ location }>
-                    <Route exact path={commonPath + '/'}
+                    <Route exact path={ process.env.PUBLIC_URL + '/' }
                         component={ () => ( <About
                             lang={ this.props.lang }
                             pending={ this.props.pending }
