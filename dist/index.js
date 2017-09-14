@@ -35090,7 +35090,7 @@ var Menu = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactRouterDom.NavLink,
-                            { onClick: this.switchVisibility, exact: true, activeClassName: active, to: commonPath + '/' },
+                            { onClick: this.switchVisibility, exact: true, activeClassName: active, to: '/' },
                             _icons2.default.home,
                             home
                         )
@@ -35100,7 +35100,7 @@ var Menu = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactRouterDom.NavLink,
-                            { onClick: this.switchVisibility, activeClassName: active, to: commonPath + '/skills' },
+                            { onClick: this.switchVisibility, activeClassName: active, to: '/skills' },
                             _icons2.default.skills,
                             skills
                         )
@@ -35180,7 +35180,7 @@ var Menu = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouterDom.NavLink,
-                                    { exact: true, activeClassName: active, to: commonPath + '/' },
+                                    { exact: true, activeClassName: active, to: '/' },
                                     _icons2.default.home
                                 )
                             ),
@@ -35189,7 +35189,7 @@ var Menu = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouterDom.NavLink,
-                                    { activeClassName: active, to: commonPath + '/skills' },
+                                    { activeClassName: active, to: '/skills' },
                                     _icons2.default.skills
                                 )
                             ),
@@ -35555,14 +35555,14 @@ var Content = function (_Component) {
                     _react2.default.createElement(
                         _reactRouterDom.Switch,
                         { key: location },
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: commonPath + '/',
+                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/',
                             component: function component() {
                                 return _react2.default.createElement(_About2.default, {
                                     lang: _this2.props.lang,
                                     pending: _this2.props.pending,
                                     links: _this2.props.links });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: commonPath + '/skills',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: '/skills',
                             component: function component() {
                                 return _react2.default.createElement(_Skills2.default, {
                                     lang: _this2.props.lang });

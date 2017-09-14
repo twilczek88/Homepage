@@ -75,8 +75,8 @@ class Menu extends Component {
 
         const mobileMenu = <div>
             <ul>
-                <li><NavLink onClick={ this.switchVisibility } exact activeClassName={ active } to={commonPath + '/'}>{ icons.home }{home}</NavLink></li>
-                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to={ commonPath + '/skills' }>{ icons.skills }{skills}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } exact activeClassName={ active } to='/'>{ icons.home }{home}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/skills' >{ icons.skills }{skills}</NavLink></li>
                 <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/projects'>{ icons.projects }{projects}</NavLink></li>
                 <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/contact'>{ icons.contact }{contact}</NavLink></li>
             </ul>
@@ -91,8 +91,8 @@ class Menu extends Component {
                 <nav>
                     <div styleName='flag' onClick={ this.switchLanguage }>{ drawFlag() }</div>
                     <ul>
-                        <li><NavLink exact activeClassName={ active } to={ commonPath + '/' }>{ icons.home }</NavLink></li>
-                        <li><NavLink activeClassName={ active } to={ commonPath + '/skills'}>{ icons.skills }</NavLink></li>
+                        <li><NavLink exact activeClassName={ active } to='/'>{ icons.home }</NavLink></li>
+                        <li><NavLink activeClassName={ active } to='/skills'>{ icons.skills }</NavLink></li>
                         <li><NavLink activeClassName={ active } to='/projects'>{ icons.projects }</NavLink></li>
                         <li><NavLink activeClassName={ active } to='/contact'>{ icons.contact }</NavLink></li>
                     </ul>
