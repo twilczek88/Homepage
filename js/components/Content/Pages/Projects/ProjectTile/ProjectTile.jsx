@@ -17,13 +17,13 @@ class SkillTile extends Component {
 
         console.log(thumbnail);
 
-        return <a href={ link } target='_blank' styleName='container'>
+        return <div href={ link } target='_blank' styleName='container'>
             <h3>{ title }</h3>
             <p>{ description }</p>
-            <div styleName='thumbnail-wrapper'>
+            <a href = { link } target='_blank' styleName='thumbnail-wrapper'>
                 <img src={ thumbnail }/>
-            </div>
-        </a>
+            </a>
+        </div>
     }
 }
 

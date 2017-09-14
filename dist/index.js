@@ -36335,7 +36335,7 @@ var SkillTile = function (_Component) {
             console.log(thumbnail);
 
             return _react2.default.createElement(
-                'a',
+                'div',
                 { href: link, target: '_blank', styleName: 'container' },
                 _react2.default.createElement(
                     'h3',
@@ -36348,8 +36348,8 @@ var SkillTile = function (_Component) {
                     description
                 ),
                 _react2.default.createElement(
-                    'div',
-                    { styleName: 'thumbnail-wrapper' },
+                    'a',
+                    { href: link, target: '_blank', styleName: 'thumbnail-wrapper' },
                     _react2.default.createElement('img', { src: thumbnail })
                 )
             );
