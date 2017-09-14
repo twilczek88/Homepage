@@ -19,12 +19,12 @@ class Content extends Component {
                 transitionEnterTimeout = { 300 }
                 transitionLeave = { false }>
                 <Switch key={ location }>
-                    <Route exact path={ process.env.PUBLIC_URL + '/' }
+                    <Route exact path = '/'
                         component={ () => ( <About
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                        <Route path={process.env.PUBLIC_URL + '/skills'}
+                        <Route path= '/skills'
                         component={ () => ( <Skills
                             lang={ this.props.lang } /> )}/>
                     <Route path='/projects'

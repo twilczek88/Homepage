@@ -27362,7 +27362,7 @@ function getTransitionProperties() {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(process) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -27461,7 +27461,7 @@ var Layout = function (_Component) {
             } else {
                 return _react2.default.createElement(
                     _reactRouterDom.BrowserRouter,
-                    null,
+                    { basename: process.env.PUBLIC_URL },
                     _react2.default.createElement(
                         _reactAddonsCssTransitionGroup2.default,
                         {
@@ -27487,6 +27487,7 @@ var Layout = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _reactCssModules2.default)(Layout, _layout2.default);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 273 */
@@ -35474,7 +35475,7 @@ exports.default = (0, _reactCssModules2.default)(Header, _header2.default);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -35554,14 +35555,14 @@ var Content = function (_Component) {
                     _react2.default.createElement(
                         _reactRouterDom.Switch,
                         { key: location },
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: process.env.PUBLIC_URL + '/',
+                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/',
                             component: function component() {
                                 return _react2.default.createElement(_About2.default, {
                                     lang: _this2.props.lang,
                                     pending: _this2.props.pending,
                                     links: _this2.props.links });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: process.env.PUBLIC_URL + '/skills',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: '/skills',
                             component: function component() {
                                 return _react2.default.createElement(_Skills2.default, {
                                     lang: _this2.props.lang });
@@ -35589,7 +35590,6 @@ var Content = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _reactCssModules2.default)(Content, _content2.default);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 433 */
