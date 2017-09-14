@@ -42,7 +42,6 @@ class Home extends Component {
                 component='div'
                 styleName='left'
                 transitionName='switch'
-                transitionAppearTimeout = { 200 }
                 transitionEnterTimeout = { 200 }
                 transitionLeaveTimeout = { 200 }>
                 <SkillDescription

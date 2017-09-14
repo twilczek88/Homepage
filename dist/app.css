@@ -645,6 +645,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  min-height: 284px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
