@@ -36438,7 +36438,7 @@ var Contact = function (_Component) {
                         'Currently available for a full time job preferably as a junior here in Krak\xF3w, but depending on provided conditions I may consider a relocation. Feel free to give me a call or send a message!'
                     )
                 );
-                resumeLink = '../../../../cv/Resume_eng.pdf';
+                resumeLink = '/Homepage/cv/Resume_eng.pdf';
                 resume = _react2.default.createElement(
                     'p',
                     null,
@@ -36459,7 +36459,7 @@ var Contact = function (_Component) {
                         'Obecnie szukam pracy w charakterze juniora w Krakowie, ale ch\u0119tnie przemy\u015Bl\u0119 relokacj\u0119, je\u017Celi pozwol\u0105 na to warunki. Prosz\u0119 o kontakt!'
                     )
                 );
-                resumeLink = '../../../../cv/CV.pdf';
+                resumeLink = '/Homepage/cv/CV.pdf';
                 resume = _react2.default.createElement(
                     'p',
                     null,

@@ -16,14 +16,14 @@ class Contact extends Component {
                 <h1>Contact Me!</h1>
                 <p>Currently available for a full time job preferably as a junior here in Kraków, but depending on provided conditions I may consider a relocation. Feel free to give me a call or send a message!</p>
             </article>
-            resumeLink = '../../../../cv/Resume_eng.pdf';
+            resumeLink = '/Homepage/cv/Resume_eng.pdf';
             resume = <p>My Resume</p>
         } else {
             article = <article>
                 <h1>Kontakt</h1>
                 <p>Obecnie szukam pracy w charakterze juniora w Krakowie, ale chętnie przemyślę relokację, jeżeli pozwolą na to warunki. Proszę o kontakt!</p>
             </article>
-            resumeLink = '../../../../cv/CV.pdf';
+            resumeLink = '/Homepage/cv/CV.pdf';
             resume = <p>moje CV</p>
         }
 
