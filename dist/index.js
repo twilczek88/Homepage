@@ -35198,7 +35198,7 @@ var Menu = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouterDom.NavLink,
-                                    { activeClassName: active, to: '/projects' },
+                                    { activeClassName: active, to: commonPath + '/projects' },
                                     _icons2.default.projects
                                 )
                             ),
@@ -35207,7 +35207,7 @@ var Menu = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouterDom.NavLink,
-                                    { activeClassName: active, to: '/contact' },
+                                    { activeClassName: active, to: commonPath + '/contact' },
                                     _icons2.default.contact
                                 )
                             )
@@ -35542,7 +35542,7 @@ var Content = function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            var commonPath = 'https://twilczek88.github.io/Homepage';
+            var commonPath = '';
             return _react2.default.createElement(
                 'main',
                 null,
@@ -35567,14 +35567,14 @@ var Content = function (_Component) {
                                 return _react2.default.createElement(_Skills2.default, {
                                     lang: _this2.props.lang });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: '/projects',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: commonPath + '/projects',
                             component: function component() {
                                 return _react2.default.createElement(_Projects2.default, {
                                     lang: _this2.props.lang,
                                     pending: _this2.props.pending,
                                     links: _this2.props.links });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: '/contact',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: commonPath + '/contact',
                             component: function component() {
                                 return _react2.default.createElement(_Contact2.default, {
                                     lang: _this2.props.lang });

@@ -12,7 +12,7 @@ import NotFound from './Pages/NotFound/NotFound.jsx';
 
 class Content extends Component {
     render() {
-        const commonPath = 'https://twilczek88.github.io/Homepage';
+        const commonPath = '';
         return <main>
             <CSSTransitionGroup
                 transitionName = 'fade'
@@ -24,15 +24,15 @@ class Content extends Component {
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                        <Route path={ commonPath + '/skills'}
+                        <Route path={ commonPath + '/skills' }
                         component={ () => ( <Skills
                             lang={ this.props.lang } /> )}/>
-                    <Route path='/projects'
+                    <Route path={commonPath + '/projects'}
                         component={ () => ( <Projects
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route path='/contact'
+                    <Route path={commonPath + '/contact'}
                         component={ () => ( <Contact
                         lang={ this.props.lang } /> )}/>
                     <Route component={ NotFound }/>
