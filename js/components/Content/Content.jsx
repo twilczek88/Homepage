@@ -24,15 +24,15 @@ class Content extends Component {
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route path='/Homepage/skills'
+                    <Route exact path='/Homepage/skills'
                         component={ () => ( <Skills
                             lang={ this.props.lang } /> )}/>
-                    <Route path='/Homepage/projects'
+                    <Route exact path='/Homepage/projects'
                         component={ () => ( <Projects
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route path='/Homepage/contact'
+                    <Route exact path='/Homepage/contact'
                         component={ () => ( <Contact
                         lang={ this.props.lang } /> )}/>
                     <Route component={ NotFound }/>
