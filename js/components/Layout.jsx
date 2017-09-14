@@ -44,7 +44,7 @@ class Layout extends Component {
                     <p>Just a second...</p>
             </div>
         } else {
-            return <Router basename={ process.env.PUBLIC_URL }>
+            return <Router basename = 'https://twilczek88.github.io/Homepage' >
                 <CSSTransitionGroup
                     component = 'div'
                     styleName = 'container'

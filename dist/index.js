@@ -27362,7 +27362,7 @@ function getTransitionProperties() {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -27461,7 +27461,7 @@ var Layout = function (_Component) {
             } else {
                 return _react2.default.createElement(
                     _reactRouterDom.BrowserRouter,
-                    { basename: process.env.PUBLIC_URL },
+                    { basename: 'https://twilczek88.github.io/Homepage' },
                     _react2.default.createElement(
                         _reactAddonsCssTransitionGroup2.default,
                         {
@@ -27487,7 +27487,6 @@ var Layout = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _reactCssModules2.default)(Layout, _layout2.default);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 273 */
