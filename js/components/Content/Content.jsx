@@ -19,7 +19,7 @@ class Content extends Component {
                 transitionEnterTimeout = { 300 }
                 transitionLeave = { false }>
                 <Switch key={ location }>
-                    <Route exact path='/'
+                    <Route exact path={commonPath + '/'}
                         component={ () => ( <About
                             lang={ this.props.lang }
                             pending={ this.props.pending }

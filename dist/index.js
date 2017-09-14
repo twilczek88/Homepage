@@ -35180,7 +35180,7 @@ var Menu = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouterDom.NavLink,
-                                    { exact: true, activeClassName: active, to: commonPath + '/' },
+                                    { exact: true, activeClassName: active, to: '/' },
                                     _icons2.default.home
                                 )
                             ),
@@ -35555,7 +35555,7 @@ var Content = function (_Component) {
                     _react2.default.createElement(
                         _reactRouterDom.Switch,
                         { key: location },
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/',
+                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: commonPath + '/',
                             component: function component() {
                                 return _react2.default.createElement(_About2.default, {
                                     lang: _this2.props.lang,
