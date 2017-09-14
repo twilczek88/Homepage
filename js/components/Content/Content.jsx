@@ -12,7 +12,7 @@ import NotFound from './Pages/NotFound/NotFound.jsx';
 
 class Content extends Component {
     render() {
-        
+
         return <main>
             <CSSTransitionGroup
                 transitionName = 'fade'
@@ -24,7 +24,7 @@ class Content extends Component {
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                        <Route path='/skills'
+                        <Route path={process.env.PUBLIC_URL + '/skills'}
                         component={ () => ( <Skills
                             lang={ this.props.lang } /> )}/>
                     <Route path='/projects'

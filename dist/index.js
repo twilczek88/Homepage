@@ -35561,7 +35561,7 @@ var Content = function (_Component) {
                                     pending: _this2.props.pending,
                                     links: _this2.props.links });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: '/skills',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: process.env.PUBLIC_URL + '/skills',
                             component: function component() {
                                 return _react2.default.createElement(_Skills2.default, {
                                     lang: _this2.props.lang });
