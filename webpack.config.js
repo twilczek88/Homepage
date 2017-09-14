@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve("dist"),
         filename: 'index.js',
-        publicPath: '/Homepage'
+        publicPath: 'https://twilczek88.github.io/Homepage/'
     },
     devServer:	{
         inline:	true,
