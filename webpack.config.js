@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve("dist"),
         filename: 'index.js',
-        // publicPath: '/'
+        publicPath: '/Homepage'
     },
     devServer:	{
         inline:	true,
