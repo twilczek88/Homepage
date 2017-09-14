@@ -78,10 +78,10 @@ class Menu extends Component {
 
         const mobileMenu = <div>
             <ul>
-                <li><NavLink onClick={ this.switchVisibility } exact activeClassName={ active } to='/Homepage'>{ icons.home }{home}</NavLink></li>
-                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/Homepage/skills'>{ icons.skills }{skills}</NavLink></li>
-                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/Homepage/projects'>{ icons.projects }{projects}</NavLink></li>
-                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/Homepage/contact'>{ icons.contact }{contact}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } exact activeClassName={ active } to='/'>{ icons.home }{home}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/skills'>{ icons.skills }{skills}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/projects'>{ icons.projects }{projects}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/contact'>{ icons.contact }{contact}</NavLink></li>
             </ul>
             <ul>
                 <li><a onClick={ this.switchVisibility } href='https://github.com/twilczek88' target='_blank'>{icons.gitHub}<p>github</p></a></li>

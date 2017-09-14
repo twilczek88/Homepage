@@ -19,20 +19,20 @@ class Content extends Component {
                 transitionEnterTimeout = { 300 }
                 transitionLeave = { false }>
                 <Switch key={ location }>
-                    <Route exact path='/Homepage'
+                    <Route exact path = { process.env.PUBLIC_URL + '/' }
                         component={ () => ( <About
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route exact path='/Homepage/skills'
+                        <Route exact path = { process.env.PUBLIC_URL + '/skills' }
                         component={ () => ( <Skills
                             lang={ this.props.lang } /> )}/>
-                    <Route exact path='/Homepage/projects'
+                        <Route exact path = { process.env.PUBLIC_URL + '/projects' }
                         component={ () => ( <Projects
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route exact path='/Homepage/contact'
+                        <Route exact path = { process.env.PUBLIC_URL + '/contact' }
                         component={ () => ( <Contact
                         lang={ this.props.lang } /> )}/>
                     <Route component={ NotFound }/>
