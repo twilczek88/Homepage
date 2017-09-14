@@ -8,7 +8,7 @@ class SkillTile extends Component {
         const title = this.props.link.name;
         const description = this.props.link.description;
 
-        let thumbnail = 'no image';
+        let thumbnail = <p>no image</p>
         if( link.indexOf('html') == -1 ) {
             thumbnail = `${link}/img/thumbnail.png`;
         } else {

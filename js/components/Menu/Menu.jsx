@@ -47,7 +47,6 @@ class Menu extends Component {
 
 
     render() {
-        const commonPath = 'https://twilczek88.github.io/Homepage'
         const active = styles.active;
         const drawFlag = () => {
             if(this.props.lang == 'english') {

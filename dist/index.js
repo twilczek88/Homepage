@@ -35021,7 +35021,6 @@ var Menu = function (_Component) {
         value: function render() {
             var _this3 = this;
 
-            var commonPath = 'https://twilczek88.github.io/Homepage';
             var active = _menu2.default.active;
             var drawFlag = function drawFlag() {
                 if (_this3.props.lang == 'english') {
@@ -36325,7 +36324,11 @@ var SkillTile = function (_Component) {
             var title = this.props.link.name;
             var description = this.props.link.description;
 
-            var thumbnail = 'no image';
+            var thumbnail = _react2.default.createElement(
+                'p',
+                null,
+                'no image'
+            );
             if (link.indexOf('html') == -1) {
                 thumbnail = link + '/img/thumbnail.png';
             } else {
