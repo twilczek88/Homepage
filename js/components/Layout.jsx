@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 import CSSModules from 'react-css-modules';
 import styles from './layout.scss';
@@ -44,7 +44,7 @@ class Layout extends Component {
                     <p>Just a second...</p>
             </div>
         } else {
-            return <Router basename = 'https://twilczek88.github.io/Homepage' >
+            return <Router>
                 <CSSTransitionGroup
                     component = 'div'
                     styleName = 'container'

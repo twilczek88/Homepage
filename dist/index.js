@@ -27460,8 +27460,8 @@ var Layout = function (_Component) {
                 );
             } else {
                 return _react2.default.createElement(
-                    _reactRouterDom.BrowserRouter,
-                    { basename: 'https://twilczek88.github.io/Homepage' },
+                    _reactRouterDom.HashRouter,
+                    null,
                     _react2.default.createElement(
                         _reactAddonsCssTransitionGroup2.default,
                         {
