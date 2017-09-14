@@ -35021,7 +35021,7 @@ var Menu = function (_Component) {
         value: function render() {
             var _this3 = this;
 
-            var commonPath = 'https://twilczek88.github.io/Homepage';
+            var commonPath = '';
             var active = _menu2.default.active;
             var drawFlag = function drawFlag() {
                 if (_this3.props.lang == 'english') {
@@ -35542,7 +35542,7 @@ var Content = function (_Component) {
         value: function render() {
             var _this2 = this;
 
-            var commonPath = '';
+            var commonPath = 'https://twilczek88.github.io/Homepage';
             return _react2.default.createElement(
                 'main',
                 null,

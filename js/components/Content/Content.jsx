@@ -12,7 +12,7 @@ import NotFound from './Pages/NotFound/NotFound.jsx';
 
 class Content extends Component {
     render() {
-        const commonPath = '';
+        const commonPath = 'https://twilczek88.github.io/Homepage';
         return <main>
             <CSSTransitionGroup
                 transitionName = 'fade'
