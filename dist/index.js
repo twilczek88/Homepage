@@ -35011,10 +35011,6 @@ var Menu = function (_Component) {
                 }
             };
 
-            // document.addEventListener('click', () => {
-            //     if(this.state.isShown){ this.switchVisibility(); };
-            // });
-
             match();
             window.addEventListener('resize', function () {
                 return match();
@@ -35025,6 +35021,7 @@ var Menu = function (_Component) {
         value: function render() {
             var _this3 = this;
 
+            var commonPath = 'https://twilczek88.github.io/Homepage';
             var active = _menu2.default.active;
             var drawFlag = function drawFlag() {
                 if (_this3.props.lang == 'english') {
@@ -35093,7 +35090,7 @@ var Menu = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactRouterDom.NavLink,
-                            { onClick: this.switchVisibility, exact: true, activeClassName: active, to: '/Homepage' },
+                            { onClick: this.switchVisibility, exact: true, activeClassName: active, to: commonPath + '/' },
                             _icons2.default.home,
                             home
                         )
@@ -35103,7 +35100,7 @@ var Menu = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactRouterDom.NavLink,
-                            { onClick: this.switchVisibility, activeClassName: active, to: '/Homepage/skills' },
+                            { onClick: this.switchVisibility, activeClassName: active, to: commonPath + '/skills' },
                             _icons2.default.skills,
                             skills
                         )
@@ -35113,7 +35110,7 @@ var Menu = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactRouterDom.NavLink,
-                            { onClick: this.switchVisibility, activeClassName: active, to: '/Homepage/projects' },
+                            { onClick: this.switchVisibility, activeClassName: active, to: '/projects' },
                             _icons2.default.projects,
                             projects
                         )
@@ -35123,7 +35120,7 @@ var Menu = function (_Component) {
                         null,
                         _react2.default.createElement(
                             _reactRouterDom.NavLink,
-                            { onClick: this.switchVisibility, activeClassName: active, to: '/Homepage/contact' },
+                            { onClick: this.switchVisibility, activeClassName: active, to: '/contact' },
                             _icons2.default.contact,
                             contact
                         )
@@ -35183,7 +35180,7 @@ var Menu = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouterDom.NavLink,
-                                    { exact: true, activeClassName: active, to: '/' },
+                                    { exact: true, activeClassName: active, to: commonPath + '/' },
                                     _icons2.default.home
                                 )
                             ),
@@ -35192,7 +35189,7 @@ var Menu = function (_Component) {
                                 null,
                                 _react2.default.createElement(
                                     _reactRouterDom.NavLink,
-                                    { activeClassName: active, to: '/skills' },
+                                    { activeClassName: active, to: commonPath + '/skills' },
                                     _icons2.default.skills
                                 )
                             ),
@@ -35545,6 +35542,7 @@ var Content = function (_Component) {
         value: function render() {
             var _this2 = this;
 
+            var commonPath = 'https://twilczek88.github.io/Homepage';
             return _react2.default.createElement(
                 'main',
                 null,
@@ -35557,26 +35555,26 @@ var Content = function (_Component) {
                     _react2.default.createElement(
                         _reactRouterDom.Switch,
                         { key: location },
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/Homepage',
+                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: commonPath + '/',
                             component: function component() {
                                 return _react2.default.createElement(_About2.default, {
                                     lang: _this2.props.lang,
                                     pending: _this2.props.pending,
                                     links: _this2.props.links });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/Homepage/skills',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: commonPath + '/skills',
                             component: function component() {
                                 return _react2.default.createElement(_Skills2.default, {
                                     lang: _this2.props.lang });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/Homepage/projects',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: '/projects',
                             component: function component() {
                                 return _react2.default.createElement(_Projects2.default, {
                                     lang: _this2.props.lang,
                                     pending: _this2.props.pending,
                                     links: _this2.props.links });
                             } }),
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/Homepage/contact',
+                        _react2.default.createElement(_reactRouterDom.Route, { path: '/contact',
                             component: function component() {
                                 return _react2.default.createElement(_Contact2.default, {
                                     lang: _this2.props.lang });

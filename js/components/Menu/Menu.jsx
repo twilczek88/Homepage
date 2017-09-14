@@ -41,16 +41,13 @@ class Menu extends Component {
             }
         };
 
-        // document.addEventListener('click', () => {
-        //     if(this.state.isShown){ this.switchVisibility(); };
-        // });
-
         match();
         window.addEventListener('resize', () => match());
     }
 
 
     render() {
+        const commonPath = 'https://twilczek88.github.io/Homepage'
         const active = styles.active;
         const drawFlag = () => {
             if(this.props.lang == 'english') {
@@ -78,10 +75,10 @@ class Menu extends Component {
 
         const mobileMenu = <div>
             <ul>
-                <li><NavLink onClick={ this.switchVisibility } exact activeClassName={ active } to='/Homepage'>{ icons.home }{home}</NavLink></li>
-                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/Homepage/skills'>{ icons.skills }{skills}</NavLink></li>
-                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/Homepage/projects'>{ icons.projects }{projects}</NavLink></li>
-                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/Homepage/contact'>{ icons.contact }{contact}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } exact activeClassName={ active } to={commonPath + '/'}>{ icons.home }{home}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to={ commonPath + '/skills' }>{ icons.skills }{skills}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/projects'>{ icons.projects }{projects}</NavLink></li>
+                <li><NavLink onClick={ this.switchVisibility } activeClassName={ active } to='/contact'>{ icons.contact }{contact}</NavLink></li>
             </ul>
             <ul>
                 <li><a onClick={ this.switchVisibility } href='https://github.com/twilczek88' target='_blank'>{icons.gitHub}<p>github</p></a></li>
@@ -94,8 +91,8 @@ class Menu extends Component {
                 <nav>
                     <div styleName='flag' onClick={ this.switchLanguage }>{ drawFlag() }</div>
                     <ul>
-                        <li><NavLink exact activeClassName={ active } to='/'>{ icons.home }</NavLink></li>
-                        <li><NavLink activeClassName={ active } to='/skills'>{ icons.skills }</NavLink></li>
+                        <li><NavLink exact activeClassName={ active } to={ commonPath + '/' }>{ icons.home }</NavLink></li>
+                        <li><NavLink activeClassName={ active } to={ commonPath + '/skills'}>{ icons.skills }</NavLink></li>
                         <li><NavLink activeClassName={ active } to='/projects'>{ icons.projects }</NavLink></li>
                         <li><NavLink activeClassName={ active } to='/contact'>{ icons.contact }</NavLink></li>
                     </ul>
@@ -126,7 +123,7 @@ class Menu extends Component {
                 return <aside>
                     <nav>
                         <div styleName = 'flag' onClick = { this.switchLanguage }>{ drawFlag() }</div>
-                        <div styleName = 'burger' onClick={ this.switchVisibility }>{ icons.burger }</div>
+                        <div styleName = 'burger' onClick = { this.switchVisibility }>{ icons.burger }</div>
                     </nav>
                     <ReactCSSTransitionGroup
                         component = 'nav'

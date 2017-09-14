@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, hashHistory } from 'react-router-dom';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 import CSSModules from 'react-css-modules';
 import styles from './content.scss';
@@ -12,27 +12,27 @@ import NotFound from './Pages/NotFound/NotFound.jsx';
 
 class Content extends Component {
     render() {
+        const commonPath = 'https://twilczek88.github.io/Homepage';
         return <main>
-
             <CSSTransitionGroup
                 transitionName = 'fade'
                 transitionEnterTimeout = { 300 }
                 transitionLeave = { false }>
                 <Switch key={ location }>
-                    <Route exact path='/Homepage'
+                    <Route exact path={ commonPath + '/' }
                         component={ () => ( <About
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route exact path='/Homepage/skills'
+                        <Route path={ commonPath + '/skills'}
                         component={ () => ( <Skills
                             lang={ this.props.lang } /> )}/>
-                    <Route exact path='/Homepage/projects'
+                    <Route path='/projects'
                         component={ () => ( <Projects
                             lang={ this.props.lang }
                             pending={ this.props.pending }
                             links={ this.props.links } /> )}/>
-                    <Route exact path='/Homepage/contact'
+                    <Route path='/contact'
                         component={ () => ( <Contact
                         lang={ this.props.lang } /> )}/>
                     <Route component={ NotFound }/>
